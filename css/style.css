@@ -1,0 +1,57 @@
+@font-face {
+	font-family: "M PLUS Rounded 1c";
+	src: url(../MPLUSRounded1c-Regular.ttf);
+}
+
+html {
+	font-family: Helvetica, Arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", sans-serif;
+}
+
+body {
+	background-color: #fdfdfdfd;
+}
+
+#top-container {
+	padding: 0 1rem;
+}
+
+#title {
+	margin-top: 3rem;
+	font-family: "M PLUS Rounded 1c", sans-serif;
+	font-size: 3rem;
+	text-align: center;
+}
+
+#description {
+	text-align: center;
+}
+
+#start-button {
+  display: block;
+  min-width: 8rem;
+	padding: 0.4rem 1.2rem;
+  margin: 0 auto;
+	margin-top: 5rem;
+	font-family: "M PLUS Rounded 1c", sans-serif;
+	color: #fff;
+  text-align: center;
+	background-color: #9370d8;
+	border-radius: 4px;
+	box-shadow: 0 0 12px 0 #ddd;
+}
+
+#start-button:hover {
+	background-color: #765baa;
+}
+
+#start-button:active {
+	background: #56437c;
+}
+
+footer {
+	padding: 2rem;
+	margin-top: 10rem;
+	color: #888;
+	text-align: center;
+	background-color: #eee;
+}

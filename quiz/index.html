@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>Research survey</title>
+		<meta name="description" content="課題研究アンケートです。" />
+
+		<link rel="stylesheet" href="./reset.css" />
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+	<body>
+		<div id="top-container">
+			<div id="title">課題研究アンケート</div>
+			<div id="description">集中力に関する課題研究のアンケートです。</div>
+			<div id="test">
+				<div id="test-question">
+					<span id="test-question-prim-element" class="question-element">13</span>
+					<span id="test-question-sign" class="question-element">+</span>
+					<span id="test-question-sec-element" class="question-element">1</span>
+				</div>
+				<form id="test-form" name="testForm">
+					<input
+					type="text"
+					inputmode="numeric"
+					id="test-input"
+					autofocus
+					autocomplete="off"
+					name="inputAnswer"
+					/>
+					<div id="error-msg"></div>
+					<input type="submit" id="test-button" value="次へ" />
+				</form>
+				<!-- <div id="test-timer">
+					<span>残り時間: </span>
+					<span id="test-timer-time">00:00</span>
+				</div> -->
+			</div>
+		</div>
+		<script src="./js/main.js"></script>
+	</body>
+	<footer id="footer">© 2022.</footer>
+	</html>
+	
