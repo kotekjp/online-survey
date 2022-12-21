@@ -1,45 +1,43 @@
-
-const TIME = 30;
-
-class Timer {
-	constructor() {
-		this.intervalId;
-		this.time = TIME;
-		return;
-	}
-	
-	start() {
-		const intervalId = setInterval(this.updateTime, 1000);
-		this.intervalId = intervalId;
-		console.log(`Timer [${this.intervalId}]: timer started!`)
-		return;
-	}
-
-	clear() {
-		clearInterval(this.intervalId);
-	}
-	
-	updateTime() {
-		if (this.time < 0) {
-			this.clear();
-			return;
-		}
-		this.time -= 1
-		const timer = document.getElementById("test-timer-time");
-		const timerText = String((this.time - this.time % 60) / 60) + ":" + String(this.time % 60);
-		timer.textContent = timerText;
-		console.log(`Timer [${this.intervalId}]: timer updated!`)
-		return;
-	}
-}
-
+const TIMER_TIME = 10;
+let currentTime = 0;
+let currentCount = 0;
 init();
 
 function init() {
+	initTimer();
+	setInterval(runTimer, 1000);
 	registerFormEventHandler();
 	reset();
-	// const timer = new Timer();
-	// timer.start(); 
+}
+
+function initTimer() {
+	currentTime = TIMER_TIME;
+	updateDisplayTimer();
+	console.log("initTimer: timer initialized!");
+}
+
+function runTimer() {
+	updateTime();
+	updateDisplayTimer();
+}
+
+function updateTime() {
+	if (currentTime <= 0) {
+		finish();
+		return;
+	}
+	currentTime -= 1;
+	console.log(`updateTime: in-code timer updated! [${currentTime}]`);
+}
+
+function updateDisplayTimer() {
+	const timerMin = document.getElementById("test-timer-min");
+	const timerSec = document.getElementById("test-timer-sec");
+	const min = (currentTime - (currentTime % 60)) / 60;
+	const sec = currentTime % 60;
+	timerMin.textContent = min.toString().padStart(2, "0");
+	timerSec.textContent = sec.toString().padStart(2, "0");
+	console.log(`updateDisplayTimer: timer display updated! [${timerMin.textContent}:${timerSec.textContent}]`);
 }
 
 function registerFormEventHandler() {
@@ -85,13 +83,13 @@ function checkInput() {
 
 function isValidAnswer(primElement, secElement, answer) {
 	const isValid = primElement + secElement == answer;
-	// const isValid = (11 + 23 == 34);
 	return isValid;
 }
 
 function reset() {
 	clearForm();
 	updateQuestion();
+	updateCount();
 
 	console.log("reset: form reset!");
 	return;
@@ -117,4 +115,15 @@ function updateQuestion() {
 
 	console.log("updateQuestion: question updated!");
 	return;
+}
+
+function updateCount() {
+	const counterElement = document.getElementById("test-counter-number");
+	currentCount += 1;
+	counterElement.textContent = currentCount.toString();
+	console.log(`updateCount: count updated! [${currentCount.toString()}]`);
+}
+ 
+function finish() {
+	window.location.href = "../result/index.html" + "?count=" + (currentCount - 1).toString();
 }

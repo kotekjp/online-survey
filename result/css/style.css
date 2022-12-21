@@ -22,15 +22,12 @@ body {
 	text-align: center;
 }
 
-#description {
-	text-align: center;
-}
-
-#test {
+#result {
 	max-width: 20rem;
-	padding: 1rem;
+	padding: 1.5rem;
 	margin: 0 auto;
 	margin-top: 3rem;
+	font-size: 1.5rem;
 	text-align: center;
 	border-radius: 8px;
 	background-color: #fff;
@@ -38,59 +35,32 @@ body {
 		0px 5px 5px -3px rgba(0, 0, 0, 0.2);
 }
 
-#test-question {
-  margin-top: 1rem;
-	font-size: 1.3rem;
-}
-
-#test-input {
-	max-width: 100%;
-	padding: 0.5rem;
-	margin-top: 1rem;
-	font-size: 2rem;
-	border: 3px solid #ddd;
-	border-radius: 4px;
-}
-
-#test-input.invalid {
-	border-color: red;
-}
-
-#error-msg {
-  color: red;
-}
-
-#test-button {
+#report-button {
+  display: block;
+  min-width: 8rem;
 	padding: 0.4rem 1.2rem;
-	margin-top: 0.7rem;
+  margin: 0 auto;
+	margin-top: 5rem;
 	font-family: "M PLUS Rounded 1c", sans-serif;
 	color: #fff;
+  text-align: center;
 	background-color: #9370d8;
 	border-radius: 4px;
 	box-shadow: 0 0 12px 0 #ddd;
 }
 
-#test-button:hover {
+#report-button:hover {
 	background-color: #765baa;
 }
 
-#test-button:active {
+#report-button:active {
 	background: #56437c;
 }
 
-#test-counter {
-  margin-top: 1.3rem;
-  font-size: .8rem;
-}
-
-#test-timer {
-  font-size: .8rem;
-}
-
 footer {
-	margin-top: 10rem;
 	padding: 2rem;
+	margin-top: 10rem;
+	color: #888;
 	text-align: center;
 	background-color: #eee;
-	color: #888;
 }
