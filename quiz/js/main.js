@@ -1,4 +1,4 @@
-const TIMER_TIME = 10;
+const TIMER_TIME = 60;
 let currentTime = 0;
 let currentCount = 0;
 init();
