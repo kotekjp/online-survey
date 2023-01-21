@@ -35,7 +35,7 @@ function updateDisplayTimer() {
 	const timerSec = document.getElementById("test-timer-sec");
 	const min = (currentTime - (currentTime % 60)) / 60;
 	const sec = currentTime % 60;
-	timerMin.textContent = min.toString().padStart(2, "0");
+	timerMin.textContent = (min + 2).toString().padStart(2, "0");
 	timerSec.textContent = sec.toString().padStart(2, "0");
 	console.log(`updateDisplayTimer: timer display updated! [${timerMin.textContent}:${timerSec.textContent}]`);
 }
