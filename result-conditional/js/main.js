@@ -5,7 +5,7 @@ if (!searchParams.has("count")) {
 const count = searchParams.get("count");
 
 const GOOGLE_FORM_URL =
-	"https://docs.google.com/forms/d/e/1FAIpQLSeHtvBVeu6gCqjs43aOGbnI23y8WZwyABF7D-7CP86-gFIjwQ/viewform?usp=sf_link&entry.562140838=" +
+	"https://docs.google.com/forms/d/e/1FAIpQLSe2tPYiGGYccTXyzrntHJvQgxCRneFtTtmj6D7HxuysEvVeyg/viewform?usp=sf_link&entry.562140838=" +
 	count;
 
 const reportButton = document.getElementById("report-button");

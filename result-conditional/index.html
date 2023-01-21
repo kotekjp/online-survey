@@ -13,10 +13,14 @@
 	</head>
 	<body>
 		<div id="top-container">
-			<div id="title">課題研究アンケート</div>
-			<div id="description">集中力に関する課題研究のアンケートです。</div>
-			<input type="button" id="start-button-1" class="start-buttons" value="スタート (条件なし)" />
-			<input type="button" id="start-button-2" class="start-buttons" value="スタート (条件あり)" />
+			<div id="title">結果</div>
+			<div id="result">
+				<span>あなたの結果は</span>
+				<br>
+				<span id="result-count">loading...</span>
+				<span>問です！</span>
+			</div>
+			<input type="button" id="report-button" value="Googleフォームに送信" />
 		</div>
 		<script src="./js/main.js"></script>
 	</body>

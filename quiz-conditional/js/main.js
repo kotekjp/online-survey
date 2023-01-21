@@ -125,5 +125,5 @@ function updateCount() {
 }
 
 function finish() {
-	window.location.href = "../result/index.html" + "?count=" + (currentCount - 1).toString();
+	window.location.href = "../result-conditional/index.html" + "?count=" + (currentCount - 1).toString();
 }
